@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>testlogin</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"> <!--//匯入bootstrap -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> //匯入jQuery -->
+    <script src="../bootstrap/js/bootstrap.min.js"></script> <!--//匯入bootstrap javascript -->
+
+    <script>
+
+        function run()
+        {
+            var name = document.getElementById("account").value;
+            var stunum = document.getElementById("password").value;
+
+            if(!name || !stunum )
+            {
+                <!-- alert("您有欄位沒有輸入內容!"); -->
+                if ( confirm ("我不知道你輸入了什麼 ??? ??? ") )
+                {
+                    div1.style.display='';
+                }
+            }
+            else
+            {
+                div1.style.display='none';
+            }
+        }
+
+    </script>
+
+
+</head>
+
+<body class="text-center">
+    <!-- <p class="mb-4"> 請輸入以下資訊 </p> -->
+
+    <img class="mb-4" src="https://i.imgur.com/a0rcrGp.png" alt="登入LOGO" width=80% style="width: 100%;max-width: 330px;padding: 15px;margin: auto;">
+
+    <h1 class="h3 mb-3 font-weight-normal" id="titleSignin" >Sign in</h1>
+
+<div class="row">
+
+    <p class="col-sm mb-4"> 帳號: <input type="text" id="account" value=""><br> </p>
+
+    <p class="col-sm mb-4"> 密碼: <input type="text" id="password" value=""><br> </p>
+
+</div>
+
+    <p> <input type="button" value="登入" onclick="run()"><br> </p>
+
+    <div id=div1 style="display:none">
+
+        <Img class="md-4" id="Img1" name="Img1" Src="https://i.imgur.com/EFmeNTX.jpg" width=80%><P>
+
+    </div>
+
+</body>
+
+</html>
