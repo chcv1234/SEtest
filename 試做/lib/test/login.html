@@ -13,47 +13,79 @@
         function run()
         {
             var name = document.getElementById("account").value;
-            var stunum = document.getElementById("password").value;
+            var password = document.getElementById("password").value;
 
-            if(!name || !stunum )
+            if(!name || !password )
             {
                 <!-- alert("您有欄位沒有輸入內容!"); -->
                 if ( confirm ("我不知道你輸入了什麼 ??? ??? ") )
                 {
                     div1.style.display='';
+                    div2.style.display='none';
                 }
+            }
+            else if(name=="admin" && password=="admin")
+            {
+                div1.style.display='none';
+                div2.style.display='';
             }
             else
             {
                 div1.style.display='none';
+                div2.style.display='none';
             }
         }
 
     </script>
 
+<style>
+
+    #container
+    {
+        height: 1000px;
+        margin-top:0px;
+        background: linear-gradient(-45deg, #AAFFEE, #0066FF);
+    }
+</style>
 
 </head>
 
 <body class="text-center">
     <!-- <p class="mb-4"> 請輸入以下資訊 </p> -->
 
-    <img class="mb-4" src="https://i.imgur.com/a0rcrGp.png" alt="登入LOGO" width=80% style="width: 100%;max-width: 330px;padding: 15px;margin: auto;">
+    <div id="container">
 
+        <div style="width:80%; height:50%; position:relative; margin:auto;">
+        <img class="mb-4"  src="https://i.imgur.com/a0rcrGp.png" alt="登入LOGO"  style="position:absolute;width: 100%;max-width: 330px;padding: 15px;z-index:0;">
+        <img class="mb-4"  src="https://i.imgur.com/EFmeNTX.jpg" alt="登入LOGO"  style="position:absolute;width: 100%;max-width: 330px;padding: 15px;z-index:-1;">
+        </div>
     <h1 class="h3 mb-3 font-weight-normal" id="titleSignin" >Sign in</h1>
 
-<div class="row">
+
 
     <p class="col-sm mb-4"> 帳號: <input type="text" id="account" value=""><br> </p>
 
     <p class="col-sm mb-4"> 密碼: <input type="text" id="password" value=""><br> </p>
 
-</div>
+
 
     <p> <input type="button" value="登入" onclick="run()"><br> </p>
 
+    <button type="button" class="btn btn-dark" onclick="run()">登入</button>
+
     <div id=div1 style="display:none">
 
-        <Img class="md-4" id="Img1" name="Img1" Src="https://i.imgur.com/EFmeNTX.jpg" width=80%><P>
+        <Img class="md-4" id="Img1" name="Img1" Src="https://i.imgur.com/EFmeNTX.jpg" width=50% height=50%><P>
+
+    </div>
+
+        <div id=div2 style="display:none">
+
+            <Img class="md-4" id="Img2" name="Img2" Src="https://i.imgur.com/a0rcrGp.png" width=50% height=50%><P>
+
+        </div>
+
+
 
     </div>
 

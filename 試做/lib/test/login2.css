@@ -1,0 +1,22 @@
+
+
+body
+{
+    background:-webkit-gradient(linear, left top, left bottom, from(#0066FF), to(#AAFFEE));
+    height: 1000px;
+}
+
+test
+{
+    font-family: 微軟正黑體;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: rgb(45, 45, 50);
+}
+
+
+
